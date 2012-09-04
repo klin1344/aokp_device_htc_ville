@@ -5,10 +5,17 @@ Comment "Music playback use case"
 SectionVerb
 	Name "HiFi"
 
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
+	EnableSequence
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+        EndSequence
+
+        DisableSequence
+                'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+        EndSequence
+
+        # ALSA PCMs
+        CapturePCM 0
+        PlaybackPCM 0
 
 EndSection
 
@@ -5792,6 +5799,30 @@ SectionDevice
 	ACDBID 7:1
 
 EndSection
+
+SectionDevice
+        Name "Voice Earpiece"
+        Comment "Handset Rx device"
+
+        EnableSequence
+                'SLIM_0_RX Channels':0:One
+                'RX1 MIX1 INP1':0:RX1
+                'DAC1 Switch':1:1
+                'RX1 Digital Volume':1:67
+                'EAR PA Gain':0:POS_6_DB
+        EndSequence
+
+        DisableSequence
+                'EAR PA Gain':0:POS_2_DB
+                'RX1 Digital Volume':1:0
+                'DAC1 Switch':1:0
+                'RX1 MIX1 INP1':0:ZERO
+        EndSequence
+
+        ACDBID 7:1
+
+EndSection
+
 
 SectionDevice
 	Name "Line Voice"
