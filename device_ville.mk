@@ -14,7 +14,6 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # common msm8960 configs
@@ -64,7 +63,6 @@ PRODUCT_COPY_FILES += \
     device/htc/ville/dsp/soundimage/srs_global.cfg:system/etc/soundimage/srs_global.cfg
 
 PRODUCT_COPY_FILES += \
-    device/htc/ville/dsp/snd_soc_msm/snd_soc_msm:/system/etc/snd_soc_msm/snd_soc_msm \
     device/htc/ville/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x
 
 # Keylayouts and Keychars
