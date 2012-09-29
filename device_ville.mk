@@ -131,9 +131,6 @@ $(call inherit-product, vendor/aokp/configs/gsm.mk)
 # Inherit some common stuff.	
 $(call inherit-product, vendor/aokp/configs/common_phone.mk)
 
-# Inherit device configuration	
-# $(call inherit-product, device/htc/ville/device_ville.mk)
-
 # Device naming	
 PRODUCT_DEVICE := ville
 PRODUCT_NAME := device_ville
