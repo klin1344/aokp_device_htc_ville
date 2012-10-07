@@ -15,10 +15,3 @@ ro.vendor.extension_library=/system/lib/libqc-opt.so
 
 # UMS
 persist.sys.usb.config=mass_storage,adb
-
-# Hardware Info
-ro.device.cpu=Dual-core 1.5 GHz Qualcomm MSM8960 Snapdragon S4
-ro.device.gpu=Adreno 225
-ro.device.rear_cam=8 MP, LED flash
-ro.device.front_cam=VGA
-ro.device.screen_res=540x960 pixels, 4.3 inches
